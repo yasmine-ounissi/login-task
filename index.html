@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Sign In</h1>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="mdp">Password:</label>
+                <div class="password-input">
+                    <input type="password" id="mdp" name="mdp" placeholder="Enter your password" required>
+                    <span class="clear-text" id="clearPassword">&#x2715;</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <a href="#">I forgot my password!</a>
+            </div>
+            <button type="submit">Sign In</button> <br><br>
+            <button type="submit" class="background-btn">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        const clearPassword = document.getElementById('clearPassword');
+        const passwordField = document.getElementById('mdp');
+
+        clearPassword.addEventListener('click', function() {
+            passwordField.value = '';
+        });
+    </script>
+</body>
+</html>
